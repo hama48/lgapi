@@ -1,0 +1,40 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.140.1/containers/python-3
+{
+    "name": "simple-fastapi",
+    "image": "python:3.8.6-buster",
+
+    "runArgs": ["--name=simple-fastapi"],
+
+    "customizations": {
+        "vscode": {
+            // Set *default* container specific settings.json values on container create.
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "yzhang.markdown-all-in-one",
+                "redhat.vscode-yaml",
+                "shardulm94.trailing-spaces",
+                "oderwat.indent-rainbow",
+                "mhutchie.git-graph",
+                "cweijan.vscode-database-client2"
+            ]
+        }
+    },
+
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [8000],
+
+    // ワークスペース指定
+    "workspaceFolder": "/workspaces/simple-fastapi",
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt && alembic init migrations"
+
+    // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+    // "remoteUser": "vscode"
+
+}
