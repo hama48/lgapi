@@ -1,10 +1,10 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.140.1/containers/python-3
 {
-    "name": "simple-fastapi",
+    "name": "lgapi",
     "image": "python:3.8.6-buster",
 
-    "runArgs": ["--name=simple-fastapi"],
+    "runArgs": ["--name=lgapi"],
 
     "customizations": {
         "vscode": {
@@ -29,7 +29,7 @@
     "forwardPorts": [8000],
 
     // ワークスペース指定
-    "workspaceFolder": "/workspaces/simple-fastapi",
+    "workspaceFolder": "/workspaces/lgapi",
 
     // Use 'postCreateCommand' to run commands after the container is created.
     "postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt && alembic init migrations"
