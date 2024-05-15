@@ -2,7 +2,7 @@
 
 ## 起動方法
 ```bash
-$ uvicorn src.app:app --reload
+$ uvicorn app.main:app --reload
 ```
 
 `:app`の前はソースのファイル名を指定する。  
