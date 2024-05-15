@@ -6,6 +6,10 @@
 
     "runArgs": ["--name=lgapi"],
 
+	"remoteEnv": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+    },
+
     "customizations": {
         "vscode": {
             // Set *default* container specific settings.json values on container create.
@@ -32,7 +36,7 @@
     "workspaceFolder": "/workspaces/lgapi",
 
     // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt && alembic init migrations"
+    "postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt"
 
     // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
     // "remoteUser": "vscode"
